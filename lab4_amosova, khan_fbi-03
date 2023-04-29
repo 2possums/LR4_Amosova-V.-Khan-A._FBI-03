@@ -35,11 +35,6 @@ async def save_comand(message: types.Message):
     await Form.name.set()
     await message.reply("Введите наименование валюты")
 
-#обработчик команды /show_saves для отображения историии взаимодействия с чатом и записанных валют
-@dp.message_handler(commands=['show_saves'])
-async def convert_comand(message: types.Message):
-    await message.reply(currencies)
-
 #обработчик команды /convert для конвертации и сохранения валюты
 @dp.message_handler(commands=['convert'])
 async def convert_comand(message: types.Message):
